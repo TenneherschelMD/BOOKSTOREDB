@@ -46,3 +46,9 @@ foreign key(book_id) references books(book_id),
 customer_id int,
 foreign key(customer_id) references customers(customer_id)
 );
+
+
+
+########## ROLES:
+grant select, update, insert, delete on bookstoredb.* to manager
+create user 'tenneherschel' identified by '0000' default role 'manager'
