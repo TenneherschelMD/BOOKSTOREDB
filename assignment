@@ -3,7 +3,7 @@
 A: BOOKS TABLE
 
 create table books (
-book_id varchar(200),
+book_id varchar(200) primary key,
 title varchar(200),
 genre varchar(200),
 price int
@@ -12,7 +12,7 @@ price int
 B: AUTHORS TABLE
 
 create table authors (
-author_id varchar(200),
+author_id varchar(200) primary key,
 name varchar(200),
 nationality varchar(200)
 );
