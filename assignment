@@ -28,3 +28,10 @@ phone_number int
 
 D: ORDER STATUS TABLE
 
+create table orders (
+book_id varchar(200),
+customer_id varchar(200),
+order_date date,
+shipping_status varchar(200),
+payment_method varchar(200)
+);
