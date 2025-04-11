@@ -8,7 +8,7 @@ create table books (
 book_id varchar(200) primary key,
 title varchar(200),
 genre varchar(200),
-price decimal (10, 2)
+price decimal (10, 2),
 foreign key (author_id) references authors (author_id)
 );
 
@@ -25,5 +25,7 @@ book_id varchar(200),
 customer_id int,
 order_date date,
 shipping_status varchar(200),
-payment_method varchar(200)
+payment_method varchar(200),
+foreign key (book_id) references books (book_id),
+foreign key (customer_id) references customers (customerr_id)
 );
