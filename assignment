@@ -1,15 +1,9 @@
-# create 4 TABLES:
-
-A: BOOKS TABLE
-
 create table books (
 book_id varchar(200) primary key,
 title varchar(200),
 genre varchar(200),
-price int
+price decimal (10, 2)
 );
-
-B: AUTHORS TABLE
 
 create table authors (
 author_id varchar(200) primary key,
@@ -17,20 +11,17 @@ name varchar(200),
 nationality varchar(200)
 );
 
-C: CUSTOMERS TABLE
-
 create table customers (
-customer_id varchar(200),
+customer_id int primary key auto_increment,
 name varchar(200),
 email_address varchar(200),
 phone_number int
 );
 
-D: ORDER STATUS TABLE
-
 create table orders (
+order_id int primary key auto_increment,
 book_id varchar(200),
-customer_id varchar(200),
+customer_id int,
 order_date date,
 shipping_status varchar(200),
 payment_method varchar(200)
