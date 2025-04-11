@@ -34,3 +34,15 @@ payment_method varchar(200),
 foreign key (book_id) references books (book_id),
 foreign key (customer_id) references customers (customer_id)
 );
+
+###################### TABLE WITH RELEVANT INFORMATION ABOUT THE CUSTOMERS/TRANSACTION:
+
+create table transactions (
+transaction_id int primary key auto_increment,
+author_id varchar(200),
+foreign key(author_id) references authors(author_id),
+book_id varchar(200),
+foreign key(book_id) references books(book_id),
+customer_id int,
+foreign key(customer_id) references customers(customer_id)
+);
