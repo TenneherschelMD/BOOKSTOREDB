@@ -1,14 +1,15 @@
+create table authors (
+author_id varchar(200) primary key,
+name varchar(200),
+nationality varchar(200)
+);
+
 create table books (
 book_id varchar(200) primary key,
 title varchar(200),
 genre varchar(200),
 price decimal (10, 2)
-);
-
-create table authors (
-author_id varchar(200) primary key,
-name varchar(200),
-nationality varchar(200)
+foreign key (author_id) references authors (author_id)
 );
 
 create table customers (
